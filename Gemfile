@@ -32,6 +32,8 @@ gem 'bcrypt', '~> 3.1.7'
 # Gem for Bootstrap
 gem 'bootstrap-sass'
 
+gem 'msg91ruby'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
