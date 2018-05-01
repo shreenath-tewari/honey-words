@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield :title) %></title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+
+<body>
+
+<%= render 'layouts/header' %>
+
+<% if (yield :title) != "Home"  %>
+  <h1 class="center"><%= yield :title %></h1>
+  <br>
+<% end %>
+
+<% flash.each do |key, message| %>
+  <div class="alert alert-<%= key %>"><%= message %></div>
+<% end %>
+
+<div class="container">
+  <%= yield %>
+  <%= render 'layouts/footer' %>
+</div>
+
+</body>
+</html>
